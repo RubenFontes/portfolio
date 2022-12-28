@@ -29,13 +29,13 @@ body{
 }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #FDE68A; 
+    background: #FFE082; 
 }
 
 svg{
     margin: 20vh 0 0 5vw;
     cursor: pointer;
-    color: #FDE68A;
+    color: #FFE082;
     border-radius: 50%;
     transition: .4s;
 }
@@ -103,11 +103,11 @@ figure figcaption {
 
     svg{
         margin: 10vh 0 0vh 5vw;
-        width: 32px;
+        width: 50px;
     }
 
     header{
-        margin: 3vh 5vw 7vh 5vw;
+        margin: 2vh 5vw 5vh 5vw;
     }
     
     header h1{
@@ -116,7 +116,7 @@ figure figcaption {
     
     header p{
         font-size: 1em;
-        margin-top: 3vh;
+        margin-top: 2vh;
     }
 
     img {
@@ -127,7 +127,7 @@ figure figcaption {
     }
 
     .gallery{
-        gap: 0px;
+        gap: 10px;
     }
 
     figure figcaption {
@@ -140,7 +140,7 @@ figure figcaption {
 
   df-messenger {
     --df-messenger-bot-message: white; /* Cor do balão para mensagens do agente */
-    --df-messenger-button-titlebar-color: #f4d862; /*Cor do botão flutuante e da barra de título da caixa de diálogo do chat.*/
+    --df-messenger-button-titlebar-color: #FFE082; /*Cor do botão flutuante e da barra de título da caixa de diálogo do chat.*/
     --df-messenger-button-titlebar-font-color: black; /*Cor da fonte do título na barra de título.*/
     --df-messenger-chat-background-color: whiteSmoke; /*Cor do fundo.*/
     --df-messenger-font-color: black; /*Cor da fonte para mensagens.*/
