@@ -74,12 +74,12 @@ header p{
 img {
     width: auto;
     height: 18vw;
-    transition: .4s;
+    transition: .6s;
     cursor: pointer;
 }
 
 img:hover{
-    filter: brightness(0.7);
+    filter: brightness(0.65);
 }
 
 figure {
@@ -96,45 +96,50 @@ figure figcaption {
     font-size: 1em;
     padding: 20px;
     color: #F4F4F5;
-    background-color: rgba(24, 24, 27, 0.7);
+    background-color: rgba(24, 24, 27, 0.75);
+}
+
+figure:hover{
+    transform: scale(1.04);
+    transition: .5s;
 }
 
 @media (max-width: 768px) {
 
-svg{
-    margin: 10vh 0 0vh 5vw;
-    width: 50px;
-}
+    svg{
+        margin: 10vh 0 0vh 5vw;
+        width: 44x;
+    }
 
-header{
-    margin: 2vh 5vw 5vh 5vw;
-}
+    header{
+        margin: 2vh 5vw 5vh 5vw;
+    }
 
-header h1{
-    font-size: 3em;
-}
+    header h1{
+        font-size: 3em;
+    }
 
-header p{
-    font-size: 1em;
-    margin-top: 2vh;
-}
+    header p{
+        font-size: 1em;
+        margin-top: 2vh;
+    }
 
-img {
-    width: 90vw;
-    height: auto;
-    transition: .4s;
-    cursor: pointer;
-}
+    img {
+        width: 90vw;
+        height: auto;
+        transition: .4s;
+        cursor: pointer;
+    }
 
-.gallery{
-    gap: 10px;
-}
+    .gallery{
+        gap: 10px;
+    }
 
-figure figcaption {
-    display: block !important;
-    font-size: .8em;
-    padding: 20px;
-}
+    figure figcaption {
+        display: block !important;
+        font-size: .8em;
+        padding: 20px;
+    }
 
 }
 
