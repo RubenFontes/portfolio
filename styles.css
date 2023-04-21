@@ -1,47 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif ;
+}
+
+:root {
+    --light-color: #F8FAFC;
+    --seccundary-color: #cfd6e4;
+    --main-color: #0560ff;
 }
 
 html{
+    -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
 }
 
-body{
-    background-color: #141519;
-    color: #F4F4F5;
-}
-
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #141519;
+    background-color: var(--light-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #F4F4F5; 
+    background: var(--seccundary-color);
+    border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #FDE68A; 
+body{
+    background-color: var(--light-color);;
+    color: black;
 }
 
 svg{
     margin: 20vh 0 0 5vw;
     cursor: pointer;
-    color: #FDE68A;
+    color: var(--main-color);
     border-radius: 50%;
     transition: .4s;
 }
 
 svg:hover{
-    color: #F4F4F5;
+    color: black;
     transform: rotate(180deg);
 }
 
@@ -50,8 +55,8 @@ header{
 }
 
 header h1{
-    font-size: 6em;
-    font-weight: 400;
+    font-size: 5rem;
+    font-weight: 500;
 }
 
 header p{
@@ -64,47 +69,69 @@ header p{
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: start;
     margin-left: 5vw;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
     max-width: 75vw;
 }
 
 img {
     width: auto;
     height: 18vw;
+    background-repeat: repeat;
     transition: .6s;
     cursor: pointer;
 }
 
+img, figure{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 img:hover{
-    filter: brightness(0.65);
+    filter: brightness(0.80);
 }
 
 figure {
     display: inline-block;
     position: relative;
+    height: 18vw;
+    box-shadow: rgba(17, 12, 46, 0.10) 0px 48px 100px 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 figure figcaption {
-    display: none;
+    display: block;
     position: absolute;
+    max-height: 75%;
+    min-height: 15%;
     width: 100%;
     bottom: 0vh;
     left: 0vw;
-    font-size: 1em;
+    font-size: 1rem;
     padding: 20px;
-    color: #F4F4F5;
-    background-color: rgba(24, 24, 27, 0.75);
+    color: black;
+    font-weight: 300;
+    background-color: white;
+    opacity: 0.95;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+strong{
+    font-weight: 500;
 }
 
 figure:hover{
-    transform: scale(1.04);
-    transition: .5s;
+    transform: scale(1.03);
+    transition: .6s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
 
     svg{
         margin: 10vh 0 0vh 5vw;
@@ -131,8 +158,16 @@ figure:hover{
         cursor: pointer;
     }
 
+    figure{
+        height: auto;
+    }
+
+    figure figcaption p:nth-child(2){
+        display: none;
+    }
+
     .gallery{
-        gap: 10px;
+        gap: 15px;
     }
 
     figure figcaption {
@@ -144,15 +179,15 @@ figure:hover{
 }
 
 df-messenger {
-    --df-messenger-bot-message: #FAFAFA; /* Cor do balão para mensagens do agente */
-    --df-messenger-button-titlebar-color: #FDE68A; /*Cor do botão flutuante e da barra de título da caixa de diálogo do chat.*/
-    --df-messenger-button-titlebar-font-color: #141519; /*Cor da fonte do título na barra de título.*/
-    --df-messenger-chat-background-color: #F4F4F5; /*Cor do fundo.*/
-    --df-messenger-font-color: #141519; /*Cor da fonte para mensagens.*/
-    --df-messenger-input-box-color: #FAFAFA; /*Cor do segundo plano da caixa de entrada de texto.*/
-    --df-messenger-input-font-color: #141519; /*Cor da fonte da caixa de entrada de texto.*/
-    --df-messenger-input-placeholder-font-color: #141519; /*Cor da fonte do texto do marcador na caixa de entrada de texto.*/
-    --df-messenger-minimized-chat-close-icon-color: #FAFAFA; /*Cor do ícone de fechamento na visualização de chat fechada.*/
-    --df-messenger-send-icon: #141519; /*Cor do ícone de envio na caixa de entrada de texto.*/
+    --df-messenger-bot-message: white; /* Cor do balão para mensagens do agente */
+    --df-messenger-button-titlebar-color: var(--main-color); /*Cor do botão flutuante e da barra de título da caixa de diálogo do chat.*/
+    --df-messenger-button-titlebar-font-color: var(--light-color); /*Cor da fonte do título na barra de título.*/
+    --df-messenger-chat-background-color: var(--light-color); /*Cor do fundo.*/
+    --df-messenger-font-color: black; /*Cor da fonte para mensagens.*/
+    --df-messenger-input-box-color: var(--light-color); /*Cor do segundo plano da caixa de entrada de texto.*/
+    --df-messenger-input-font-color: #131418; /*Cor da fonte da caixa de entrada de texto.*/
+    --df-messenger-input-placeholder-font-color: #131418; /*Cor da fonte do texto do marcador na caixa de entrada de texto.*/
+    --df-messenger-minimized-chat-close-icon-color: var(--light-color); /*Cor do ícone de fechamento na visualização de chat fechada.*/
+    --df-messenger-send-icon: var(--main-color); /*Cor do ícone de envio na caixa de entrada de texto.*/
     --df-messenger-user-message: #E4E4E7; /*Cor do segundo plano do balão para mensagens do usuário.*/
-} 
+  }  
