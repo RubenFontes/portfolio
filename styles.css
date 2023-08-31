@@ -71,8 +71,9 @@ header p a {
 	text-decoration: none;
 }
 
-#linkbehance{
-	text-decoration: underline !important;
+header p a:hover {
+	text-decoration: underline;
+	color: black;
 }
 
 .gallery{
