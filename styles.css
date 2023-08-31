@@ -68,10 +68,11 @@ header p{
 
 header p a {
 	color: var(--main-color);
+	text-decoration: none;
 }
 
 #linkbehance{
-	text-decoration: underline;
+	text-decoration: underline !important;
 }
 
 .gallery{
