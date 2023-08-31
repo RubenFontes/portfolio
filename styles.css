@@ -66,6 +66,14 @@ header p{
     font-weight: 300;
 }
 
+header p a {
+	color: var(--main-color);
+}
+
+#linkbehance{
+	text-decoration: underline;
+}
+
 .gallery{
     display: flex;
     flex-wrap: wrap;
