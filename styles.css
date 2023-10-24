@@ -38,7 +38,7 @@ body{
 }
 
 svg{
-    margin: 20vh 0 0 5vw;
+    margin: calc(20vh - 50px) 0 0 5vw;
     cursor: pointer;
     color: var(--main-color);
     border-radius: 50%;
@@ -79,10 +79,10 @@ header p a:hover {
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
     justify-content: start;
     margin-left: 5vw;
-    margin-bottom: 10vh;
+    margin-bottom: calc(10vh + 50px);
     max-width: 75vw;
 }
 
@@ -141,10 +141,15 @@ figure:hover{
     transition: .6s;
 }
 
+.animated {
+    transform: translateY(50px);
+    transition: .6s ease;
+}  
+
 @media (max-width: 920px) {
 
     svg{
-        margin: 10vh 0 0vh 5vw;
+        margin: calc(10vh - 50px) 0 0vh 5vw;
         width: 44px;
     }
 
